@@ -14,6 +14,8 @@ AC_PROG_LIBTOOL
 
 AC_CONFIG_MACRO_DIR([m4])
 
+PKG_CHECK_MODULES(LIBASN1C, libasn1c)
+
 # The following test is taken from WebKit's webkit.m4
 saved_CFLAGS="$CFLAGS"
 CFLAGS="$CFLAGS -fvisibility=hidden "

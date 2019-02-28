@@ -1,9 +1,9 @@
 LIBVERSION=0:0:0
 
-INCLUDES = $(all_includes) -I/usr/share/asn1c -I$(top_srcdir)/include
-AM_CFLAGS = -fPIC -O3 -Wall
+INCLUDES = $(all_includes) -I$(top_srcdir)/include
+AM_CFLAGS = -fPIC -O3 $(LIBASN1C_CFLAGS)
 
-libosmo_asn1_rrc_la_LDFLAGS=-lasn1c
+libosmo_asn1_rrc_la_LDFLAGS=$(LIBASN1C_LIBS)
 
 libosmo_asn1_rrc_la_SOURCES=	\
 	DL-DCCH-Message.c	\
